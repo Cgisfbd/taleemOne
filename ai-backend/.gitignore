@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Production output
+dist/
+
+# Environment variables
+# .env (included as repository is private)
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
