@@ -1,0 +1,402 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.fieldsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.passwordToggleBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(18, 62, 53, 0.6);
+  transition: color 150ms ease;
+  border-radius: 6px;
+}
+
+.passwordToggleBtn:hover {
+  color: #d97706;
+}
+
+.optionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .optionsRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .forgotBtn {
+    align-self: flex-end;
+  }
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #123e35;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #d97706;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.forgotBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #d97706;
+  cursor: pointer;
+  transition: color 150ms ease, text-decoration 150ms ease;
+}
+
+.forgotBtn:hover {
+  color: #b45309;
+  text-decoration: underline;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.alertBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  background: rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  border-radius: 10px;
+  color: #9f1239;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.alertIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modalBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 13, 16, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.modalContent {
+  position: relative;
+  z-index: 1001;
+  max-width: 440px;
+  width: 100%;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.modalIconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(217, 119, 6, 0.15);
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d97706;
+}
+
+.modalIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.modalCloseBtn {
+  background: none;
+  border: none;
+  padding: 6px;
+  color: #123e35;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.modalCloseBtn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.modalTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #123e35;
+  margin: 0 0 8px 0;
+}
+
+.modalDescription {
+  font-size: 0.875rem;
+  color: rgba(18, 62, 53, 0.85);
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+.modalAdviceBox {
+  background: rgba(217, 119, 6, 0.08);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.8125rem;
+  color: #92400e;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Security Setup & Compact QR Code Styles */
+.setupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.qrCardCompact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(18, 62, 53, 0.05);
+}
+
+.qrBoxCompact {
+  flex-shrink: 0;
+  width: 112px;
+  height: 112px;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid rgba(18, 62, 53, 0.14);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrImageCompact {
+  width: 102px;
+  height: 102px;
+  display: block;
+  border-radius: 4px;
+}
+
+.qrInfoCompact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.qrTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.qrTitleCompact {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #123e35;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qrBadgeCompact {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #d97706;
+  background: rgba(217, 119, 6, 0.12);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.qrHintCompact {
+  font-size: 0.725rem;
+  color: rgba(18, 62, 53, 0.72);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.singleLineSecretRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: rgba(18, 62, 53, 0.05);
+  border: 1px solid rgba(18, 62, 53, 0.12);
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin-top: 3px;
+  box-sizing: border-box;
+}
+
+.secretTag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(18, 62, 53, 0.7);
+  flex-shrink: 0;
+}
+
+.secretCodeOneLine {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #123e35;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  user-select: all;
+  line-height: 1.2;
+}
+
+.secretCodeOneLine::-webkit-scrollbar {
+  display: none;
+}
+
+.copyBtnOneLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #ffffff;
+  border: 1px solid rgba(18, 62, 53, 0.2);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #123e35;
+  cursor: pointer;
+  transition: all 120ms ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.copyBtnOneLine:hover {
+  background: #d97706;
+  border-color: #d97706;
+  color: #ffffff;
+}
+
+.gridTwoColCompact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .qrCardCompact {
+    flex-direction: column;
+    text-align: center;
+  }
+  .gridTwoColCompact {
+    grid-template-columns: 1fr;
+  }
+  .secretRowCompact {
+    justify-content: center;
+  }
+}
+
+.actionsCompact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.secondaryLinkBtn {
+  background: none;
+  border: none;
+  color: rgba(18, 62, 53, 0.65);
+  font-size: 0.775rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 4px;
+  transition: color 150ms ease;
+  text-align: center;
+}
+
+.secondaryLinkBtn:hover {
+  color: #123e35;
+}
+
+

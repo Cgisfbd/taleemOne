@@ -1,0 +1,529 @@
+.splash {
+  position: relative;
+  min-height: 100svh;
+  isolation: isolate;
+  overflow: hidden;
+  transition: opacity 350ms cubic-bezier(0.16, 1, 0.3, 1), transform 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.splashExiting {
+  opacity: 0;
+  transform: scale(0.985);
+  pointer-events: none;
+}
+
+.scene {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  padding: 48px 24px 28px;
+  z-index: 2;
+}
+
+/* Logo & Brand Container (Stationary in place - zero shifting or jumping) */
+.brandContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.emblem {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: grid;
+  place-items: center;
+}
+
+/* Luminous breathing halo glow behind the crest */
+.haloGlow {
+  position: absolute;
+  inset: 15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 253, 244, 0.85), rgba(254, 243, 199, 0.4) 54%, transparent 72%);
+  animation: halo-in 1250ms 150ms var(--silk-ease) both, halo-breathe 5s 1400ms ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Stationary SVG covering emblem with zero displacement */
+.orbits {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: #bb965660;
+  animation: halo-in 1250ms 150ms var(--silk-ease) both;
+}
+
+/* In-place concentric rotation around SVG mathematical center (180px 180px) */
+.outerOrbitGroup {
+  transform-origin: 180px 180px;
+  animation: orbit-spin-clockwise 50s linear infinite;
+  will-change: transform;
+}
+
+.innerOrbitGroup {
+  transform-origin: 180px 180px;
+  animation: orbit-spin-counter 68s linear infinite;
+  will-change: transform;
+}
+
+.outerOrbit {
+  stroke: #b69b6255;
+  stroke-width: 0.85;
+}
+
+.innerOrbit {
+  stroke: #b69b6235;
+  stroke-width: 0.65;
+  stroke-dasharray: 2 7;
+}
+
+.orbitTrace {
+  stroke: #b58a49;
+  stroke-width: 1.25;
+  stroke-dasharray: 268;
+  animation: trace-in 1600ms 350ms var(--silk-ease) both;
+}
+
+.orbitDiamond {
+  fill: #b79455;
+}
+
+.crestReveal {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  animation: crest-in 1200ms 350ms var(--silk-ease) both;
+  z-index: 1;
+}
+
+.crest {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 22px rgba(23, 56, 41, 0.16));
+}
+
+.crestSheen {
+  position: absolute;
+  inset: 0;
+  filter: brightness(1.75) saturate(0.4);
+  animation: crest-sheen 1700ms 900ms ease-in-out both;
+  mix-blend-mode: screen;
+}
+
+.sparkOne,
+.sparkTwo {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #c3a66a;
+  transform: rotate(45deg);
+  animation: spark-in 1800ms 900ms both;
+}
+
+.sparkOne {
+  top: 68px;
+  right: 28px;
+}
+
+.sparkTwo {
+  bottom: 60px;
+  left: 32px;
+  width: 3px;
+  height: 3px;
+  animation-delay: 1150ms;
+}
+
+.wordmark {
+  text-align: center;
+  margin-top: 18px;
+  animation: wordmark-in 900ms 1000ms var(--silk-ease) both;
+}
+
+.title {
+  margin: 0;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', var(--font-google-sans), sans-serif;
+  font-size: clamp(48px, 5.2vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.titleTaleem {
+  color: #123e35;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-shadow: 0 2px 14px rgba(18, 62, 53, 0.12);
+}
+
+.titleOne {
+  margin-left: 2px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(217, 119, 6, 0.28));
+}
+
+.product {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.product p {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.52em;
+  padding-left: 0.52em;
+  color: #a0742f;
+  text-transform: uppercase;
+}
+
+.product > span {
+  height: 1.5px;
+  width: 34px;
+  background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.45));
+}
+
+.product > span:last-child {
+  transform: rotate(180deg);
+}
+
+.signatureLine {
+  margin-top: 28px;
+  height: 2.5px;
+  width: 88px;
+  overflow: hidden;
+  background: rgba(182, 155, 98, 0.2);
+  border-radius: 2px;
+  animation: fade-in 700ms 1800ms both;
+}
+
+.signatureLine > span {
+  display: block;
+  height: 100%;
+  transform-origin: left;
+  background: linear-gradient(90deg, #0d3b3880, #bb914d, #f59e0b);
+  animation: signature-in 1400ms 1800ms var(--silk-ease) both;
+}
+
+/* Upgraded Luxury Verified Enterprise Footer Badge */
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px max(34px, env(safe-area-inset-bottom));
+  animation: wordmark-in 700ms 1500ms var(--silk-ease) both;
+  z-index: 2;
+}
+
+.footerBadge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 22px 8px 18px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(255, 255, 255, 0.42) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(182, 155, 98, 0.35);
+  box-shadow:
+    0 6px 22px -4px rgba(18, 62, 53, 0.08),
+    0 2px 6px rgba(217, 119, 6, 0.06),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  cursor: default;
+}
+
+.footerBadge:hover {
+  border-color: rgba(217, 119, 6, 0.55);
+  box-shadow:
+    0 10px 28px -4px rgba(18, 62, 53, 0.12),
+    0 4px 12px rgba(217, 119, 6, 0.15),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1);
+  transform: translateY(-1.5px);
+}
+
+.footerGlow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 100%
+  );
+  animation: badge-glint 5.5s 2.5s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.footerEmblem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+
+.footerDiamond {
+  width: 7.5px;
+  height: 7.5px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 1.5px;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
+  animation: diamond-pulse 2.8s infinite alternate ease-in-out;
+}
+
+.footerText {
+  margin: 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  line-height: 1;
+}
+
+.footerPrefix {
+  color: #556e61;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+}
+
+.footerBrand {
+  color: #123e35;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+  background: linear-gradient(135deg, #123e35 0%, #175447 60%, #b45309 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes ambient-float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes halo-breathe {
+  0% {
+    transform: scale(0.97);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes orbit-spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-spin-counter {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes badge-glint {
+  0%, 75% {
+    left: -100%;
+  }
+  100% {
+    left: 160%;
+  }
+}
+
+@keyframes diamond-pulse {
+  0% {
+    transform: rotate(45deg) scale(0.9);
+    box-shadow: 0 0 4px rgba(245, 158, 11, 0.4);
+  }
+  100% {
+    transform: rotate(45deg) scale(1.15);
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.9);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes halo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.88) rotate(-12deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes crest-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes wordmark-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes trace-in {
+  from {
+    stroke-dashoffset: 268;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.7;
+  }
+}
+
+@keyframes crest-sheen {
+  from {
+    clip-path: polygon(-35% 0, -15% 0, -50% 100%, -70% 100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.55;
+  }
+  to {
+    clip-path: polygon(170% 0, 190% 0, 155% 100%, 135% 100%);
+    opacity: 0;
+  }
+}
+
+@keyframes signature-in {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes spark-in {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0;
+    translate: 0 -14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand {
+    padding: 36px 16px 24px;
+  }
+  .emblem {
+    width: 250px;
+    height: 250px;
+  }
+  .crestReveal {
+    width: 154px;
+    height: 154px;
+  }
+  .wordmark {
+    margin-top: 14px;
+  }
+  .title {
+    font-size: 52px;
+  }
+  .footer {
+    padding-bottom: max(28px, env(safe-area-inset-bottom));
+  }
+  .footerBadge {
+    padding: 7px 18px 7px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash .scene *,
+  .splash .scene *::before,
+  .splash .scene *::after {
+    animation: none !important;
+  }
+  .crestSheen,
+  .sparkOne,
+  .sparkTwo,
+  .footerGlow {
+    display: none;
+  }
+  .brandContent,
+  .outerOrbitGroup,
+  .innerOrbitGroup {
+    transform: none !important;
+  }
+}

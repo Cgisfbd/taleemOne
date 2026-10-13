@@ -1,0 +1,240 @@
+/* ==========================================================================
+   TaleemOne Enterprise Premium Toaster Design System
+   Liquid Glass • Silk Teal & Amber Glow • Plus Jakarta Sans Typography
+   ========================================================================== */
+
+.toasterContainer {
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  z-index: 999999;
+}
+
+/* Individual Toast Card Container */
+.toastCard {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  min-width: 320px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-master, 10px);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 16px 38px -6px rgba(13, 59, 56, 0.16),
+    0 4px 14px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.toastCard:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 20px 42px -6px rgba(13, 59, 56, 0.22),
+    0 6px 16px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+/* Accent Ribbon (Left Vertical Border) */
+.toastCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  border-top-left-radius: var(--radius-master, 10px);
+  border-bottom-left-radius: var(--radius-master, 10px);
+  transition: background 180ms ease;
+}
+
+/* Icon Box */
+.iconBox {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Content Area */
+.contentBox {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.toastTitle {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #123e35;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.toastDescription {
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: rgba(18, 62, 53, 0.78);
+  line-height: 1.45;
+  margin: 0;
+  word-break: break-word;
+}
+
+/* Close Button */
+.closeBtn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgba(18, 62, 53, 0.45);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 160ms ease;
+  margin-top: 1px;
+}
+
+.closeBtn:hover {
+  background: rgba(18, 62, 53, 0.08);
+  color: #123e35;
+}
+
+/* ==========================================================================
+   Type Variants
+   ========================================================================== */
+
+/* 1. Error / Critical Variant */
+.typeError {
+  border-color: rgba(244, 63, 94, 0.28);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 241, 242, 0.94) 100%);
+}
+
+.typeError::before {
+  background: linear-gradient(180deg, #f43f5e 0%, #be123c 100%);
+}
+
+.typeError .iconBox {
+  background: rgba(244, 63, 94, 0.12);
+  color: #e11d48;
+  border-color: rgba(244, 63, 94, 0.2);
+}
+
+.typeError .toastTitle {
+  color: #9f1239;
+}
+
+/* 2. Success Variant */
+.typeSuccess {
+  border-color: rgba(16, 185, 129, 0.28);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(236, 253, 245, 0.94) 100%);
+}
+
+.typeSuccess::before {
+  background: linear-gradient(180deg, #10b981 0%, #047857 100%);
+}
+
+.typeSuccess .iconBox {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border-color: rgba(16, 185, 129, 0.22);
+}
+
+.typeSuccess .toastTitle {
+  color: #065f46;
+}
+
+/* 3. Warning Variant */
+.typeWarning {
+  border-color: rgba(245, 158, 11, 0.28);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(254, 243, 199, 0.92) 100%);
+}
+
+.typeWarning::before {
+  background: linear-gradient(180deg, #f59e0b 0%, #b45309 100%);
+}
+
+.typeWarning .iconBox {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+  border-color: rgba(245, 158, 11, 0.22);
+}
+
+.typeWarning .toastTitle {
+  color: #92400e;
+}
+
+/* 4. AI Cognitive Assistant Variant */
+.typeAi {
+  border-color: rgba(13, 148, 136, 0.32);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 253, 250, 0.94) 50%, rgba(245, 243, 255, 0.9) 100%);
+}
+
+.typeAi::before {
+  background: linear-gradient(180deg, #0d9488 0%, #7c3aed 100%);
+}
+
+.typeAi .iconBox {
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.14) 0%, rgba(124, 58, 237, 0.14) 100%);
+  color: #0f766e;
+  border-color: rgba(13, 148, 136, 0.25);
+}
+
+.typeAi .toastTitle {
+  color: #115e59;
+}
+
+/* 5. Info Variant */
+.typeInfo {
+  border-color: rgba(14, 165, 233, 0.28);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 249, 255, 0.94) 100%);
+}
+
+.typeInfo::before {
+  background: linear-gradient(180deg, #0ea5e9 0%, #0369a1 100%);
+}
+
+.typeInfo .iconBox {
+  background: rgba(14, 165, 233, 0.12);
+  color: #0284c7;
+  border-color: rgba(14, 165, 233, 0.22);
+}
+
+.typeInfo .toastTitle {
+  color: #075985;
+}
+
+/* ==========================================================================
+   Sonner Outer Wrapper Isolation (Eliminates Duplicate Outer Card)
+   ========================================================================== */
+:global([data-sonner-toast]) {
+  font-family: var(--font-sans), sans-serif !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  outline: none !important;
+  overflow: visible !important;
+}
+
+:global([data-sonner-toast]::before),
+:global([data-sonner-toast]::after) {
+  display: none !important;
+}

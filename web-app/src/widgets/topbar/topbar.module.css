@@ -1,0 +1,864 @@
+.topbar {
+  height: 88px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 24px;
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+  user-select: none;
+}
+
+
+
+/* Center Group: Left Edge Fixed, Right Edge Reduced */
+.centerGroup {
+  position: absolute;
+  left: max(80px, calc(50% - 368px));
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(100% - 320px);
+  max-width: 610px;
+  padding: 0 12px;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+/* Polished Liquid Glass Rectangle with 10px Rounded Corners (Enlarged Width & Height) */
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.24) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -1.5px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(18, 62, 53, 0.06);
+  padding: 0 14px 0 10px;
+  transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.searchBox:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.32) 100%);
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    0 10px 28px rgba(18, 62, 53, 0.09);
+}
+
+.searchBox:focus-within {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.42) 100%);
+  border-color: rgba(217, 119, 6, 0.55);
+  box-shadow:
+    inset 0 2px 2.5px rgba(255, 255, 255, 1),
+    0 0 0 3px rgba(217, 119, 6, 0.18),
+    0 12px 32px rgba(217, 119, 6, 0.16);
+  transform: translateY(-1px);
+}
+
+/* Tactile Glass Search Icon Pod (Rounded Rectangle) */
+.searchIconPod {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  color: rgba(18, 62, 53, 0.7);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.85);
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.searchBox:hover .searchIconPod {
+  background: rgba(255, 255, 255, 0.65);
+  color: #123e35;
+}
+
+.searchBox:focus-within .searchIconPod {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.8),
+    0 3px 10px rgba(217, 119, 6, 0.3);
+  transform: scale(1.05);
+}
+
+.searchIcon {
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #123e35;
+  min-width: 0;
+}
+
+.searchInput::placeholder {
+  color: rgba(18, 62, 53, 0.5);
+  font-weight: 400;
+  transition: color 150ms ease;
+}
+
+.searchBox:focus-within .searchInput::placeholder {
+  color: rgba(18, 62, 53, 0.35);
+}
+
+/* Clear Button */
+.searchClearBtn {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: rgba(18, 62, 53, 0.1);
+  border: none;
+  color: rgba(18, 62, 53, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: all 150ms ease;
+}
+
+.searchClearBtn:hover {
+  background: rgba(244, 63, 94, 0.18);
+  color: #be123c;
+  transform: scale(1.1);
+}
+
+/* Shortcut Tag (Rounded Rectangle) */
+.searchKbdWrapper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.searchKbd {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: rgba(18, 62, 53, 0.7);
+}
+
+/* Right Group: Pinned to End */
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Notification Button (Well Icon) */
+.iconButtonWrapper {
+  position: relative;
+}
+
+.iconButton {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.2) 100%);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  color: #123e35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 14px rgba(18, 62, 53, 0.05);
+  position: relative;
+}
+
+.iconButton:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.35) 100%);
+  border-color: rgba(217, 119, 6, 0.45);
+  color: #d97706;
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    0 8px 24px rgba(217, 119, 6, 0.18);
+}
+
+.iconButtonActive {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
+  border-color: #d97706;
+  color: #d97706;
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    0 0 0 2px rgba(217, 119, 6, 0.25);
+}
+
+.badgeDot {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: #f59e0b;
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.9);
+}
+
+/* Profile Trigger: Matches Frontend Header exactly */
+.profileTrigger {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 150ms ease;
+}
+
+.profileAvatarRing {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 2px solid #f59e0b;
+  background: #fffbeb;
+  padding: 2px;
+  box-shadow: 0 1px 3px rgba(245, 158, 11, 0.2);
+  transition: all 200ms ease;
+  flex-shrink: 0;
+}
+
+.profileTrigger:hover .profileAvatarRing,
+.profileAvatarRingActive {
+  box-shadow: 0 0 0 2px #fbbf24, 0 2px 8px rgba(245, 158, 11, 0.25);
+}
+
+.profileAvatarInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  font-weight: 900;
+  color: #d97706;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileUserFallbackIcon {
+  color: #d97706;
+}
+
+.profileMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.profileName {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #111827;
+  transition: color 150ms ease;
+  white-space: nowrap;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.profileTrigger:hover .profileName {
+  color: #d97706;
+}
+
+.profileRole {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #b45309;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 1px;
+}
+
+.profileChevron {
+  color: #b45309;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), color 200ms ease;
+}
+
+.profileChevronActive {
+  transform: rotate(180deg);
+  color: #d97706;
+}
+
+/* Honest Loading Shimmer for Non-Fabricated Data */
+.skeletonLineShort {
+  display: inline-block;
+  width: 68px;
+  height: 11px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 62, 53, 0.08) 25%,
+    rgba(18, 62, 53, 0.16) 50%,
+    rgba(18, 62, 53, 0.08) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+.skeletonLineTiny {
+  display: inline-block;
+  width: 48px;
+  height: 9px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(217, 119, 6, 0.12) 25%,
+    rgba(217, 119, 6, 0.24) 50%,
+    rgba(217, 119, 6, 0.12) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.5s infinite;
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Frontend Profile Dropdown Menu Card */
+.profileDropdownCard {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  width: 280px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    0 20px 48px -8px rgba(18, 62, 53, 0.16),
+    0 10px 20px -5px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  z-index: 50;
+  animation: cardScaleIn 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cardScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.dropdownCardHeader {
+  padding: 16px;
+  border-bottom: 1px solid rgba(243, 244, 246, 0.9);
+  background: rgba(245, 158, 11, 0.10);
+  position: relative;
+  z-index: 10;
+}
+
+.dropdownHeaderUserRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.dropdownHeaderAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  padding: 1.5px;
+  border: 2px solid #f59e0b;
+  background: #fffbeb;
+  flex-shrink: 0;
+}
+
+.dropdownHeaderAvatarInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-weight: 900;
+  color: #d97706;
+  font-size: 0.75rem;
+}
+
+.dropdownHeaderMeta {
+  min-width: 0;
+  flex: 1;
+}
+
+.dropdownHeaderName {
+  font-size: 0.875rem;
+  color: #111827;
+  font-weight: 800;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.dropdownHeaderEmail {
+  font-size: 0.75rem;
+  color: #d97706;
+  font-weight: 600;
+  margin: 2px 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.dropdownHeaderRoleBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #78350f;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  line-height: 1;
+  width: fit-content;
+}
+
+.badgeShieldIcon {
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+.dropdownCardBody {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  z-index: 10;
+  text-align: left;
+}
+
+/* Premium Optical Glass Action Button (Identical to Sidebar .navItem) */
+.dropdownActionItem {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  height: 42px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #123e35;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  position: relative;
+  user-select: none;
+}
+
+/* Tactile Glass Icon Pod (Matching Sidebar .navIconWrapper) */
+.actionIconPod {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: rgba(18, 62, 53, 0.75);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.8);
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.actionLabel {
+  flex: 1;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Hover State: Frosted Optical Glass + Amber Pod Accent */
+.dropdownActionItem:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.28) 100%);
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #0d3b38;
+  transform: translateX(3px);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    0 4px 14px rgba(18, 62, 53, 0.05);
+}
+
+.dropdownActionItem:hover .actionIconPod {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(217, 119, 6, 0.4);
+  color: #d97706;
+  transform: scale(1.06);
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95),
+    0 2px 8px rgba(217, 119, 6, 0.16);
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: rgba(18, 62, 53, 0.08);
+  margin: 5px 4px;
+  width: calc(100% - 8px);
+}
+
+/* Logout Button: Frosted Glass + Soft Red Pod Alert */
+.actionLogout {
+  color: #4b5563;
+}
+
+.actionLogoutIconPod {
+  color: #6b7280;
+}
+
+.actionLogout:hover {
+  background: linear-gradient(135deg, rgba(254, 242, 242, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
+  border-color: rgba(244, 63, 94, 0.25);
+  color: #dc2626;
+  transform: translateX(3px);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    0 4px 14px rgba(244, 63, 94, 0.06);
+}
+
+.actionLogout:hover .actionLogoutIconPod {
+  background: rgba(254, 226, 226, 0.8);
+  border-color: rgba(244, 63, 94, 0.45);
+  color: #dc2626;
+  transform: scale(1.06);
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95),
+    0 2px 8px rgba(244, 63, 94, 0.16);
+}
+
+/* Dropdown Menus (Optical Liquid Glass) */
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 320px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(36px) saturate(200%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    inset 0 1.5px 2.5px rgba(255, 255, 255, 1),
+    0 20px 48px rgba(18, 62, 53, 0.16);
+  padding: 8px;
+  z-index: 50;
+  animation: slideDown 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownHeader {
+  padding: 12px 14px 10px 14px;
+  border-bottom: 1px solid rgba(18, 62, 53, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdownTitle {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #123e35;
+  margin: 0;
+}
+
+.dropdownSubtitle {
+  font-size: 0.78rem;
+  color: rgba(18, 62, 53, 0.7);
+  margin: 0;
+}
+
+.notificationList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding: 6px 0;
+}
+
+.notificationEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 28px 16px;
+  text-align: center;
+}
+
+.notificationEmptyIcon {
+  color: rgba(18, 62, 53, 0.35);
+}
+
+.notificationEmptyText {
+  font-size: 0.8125rem;
+  color: rgba(18, 62, 53, 0.6);
+  font-weight: 500;
+}
+
+.notificationItem {
+  display: flex;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.notificationItem:hover {
+  background: rgba(217, 119, 6, 0.1);
+}
+
+.notificationIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(217, 119, 6, 0.18);
+  color: #d97706;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notificationContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.notificationText {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #123e35;
+  line-height: 1.3;
+}
+
+.notificationTime {
+  font-size: 0.7rem;
+  color: rgba(18, 62, 53, 0.6);
+}
+
+.dropdownFooter {
+  padding: 8px 12px 4px 12px;
+  border-top: 1px solid rgba(18, 62, 53, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdownFooterLink {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #d97706;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 150ms ease;
+}
+
+.dropdownFooterLink:hover {
+  background: rgba(217, 119, 6, 0.12);
+}
+
+/* Profile Dropdown Items */
+.profileMenuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 6px 0;
+}
+
+.profileMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  width: 100%;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #123e35;
+  cursor: pointer;
+  text-align: left;
+  transition: all 150ms ease;
+}
+
+.profileMenuItem:hover {
+  background: rgba(18, 62, 53, 0.07);
+  color: #0d3b38;
+}
+
+.profileMenuItemDanger {
+  color: #be123c;
+}
+
+.profileMenuItemDanger:hover {
+  background: rgba(244, 63, 94, 0.12);
+  color: #9f1239;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: rgba(18, 62, 53, 0.08);
+  margin: 6px 4px;
+}
+
+@media (max-width: 1024px) {
+  .topbar {
+    height: 72px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 24px rgba(18, 62, 53, 0.05);
+  }
+
+  .centerGroup {
+    max-width: 480px;
+    width: calc(100% - 260px);
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .centerGroup {
+    position: static;
+    transform: none;
+    width: auto;
+    flex: 1;
+    max-width: none;
+    padding: 0 4px;
+    margin: 0;
+  }
+
+  .searchBox {
+    height: 40px;
+    padding: 0 10px 0 6px;
+  }
+
+  .searchIconPod {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+
+  .profileTrigger {
+    padding-left: 0;
+  }
+
+  .profileMeta {
+    display: none;
+  }
+
+  .searchKbdWrapper {
+    display: none;
+  }
+}

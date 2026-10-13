@@ -1,0 +1,206 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.introBanner {
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.introText {
+  font-size: 0.8125rem;
+  color: rgba(18, 62, 53, 0.75);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.accordionCard {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    0 6px 20px rgba(18, 62, 53, 0.04);
+  overflow: hidden;
+  transition: all 180ms ease;
+}
+
+.accordionCardOpen {
+  border-color: rgba(217, 119, 6, 0.45);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    0 10px 28px rgba(217, 119, 6, 0.1);
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+}
+
+.accordionHeader:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconPod {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d97706;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.9);
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #123e35;
+  margin: 0;
+}
+
+.desc {
+  font-size: 0.75rem;
+  color: rgba(18, 62, 53, 0.65);
+  margin: 0;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.paragraphBadge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(18, 62, 53, 0.08);
+  color: #123e35;
+}
+
+.chevron {
+  color: rgba(18, 62, 53, 0.5);
+  transition: transform 200ms ease;
+}
+
+.chevronRotated {
+  transform: rotate(180deg);
+  color: #d97706;
+}
+
+.accordionBody {
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid rgba(18, 62, 53, 0.06);
+  padding-top: 16px;
+}
+
+.bottomActionBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(18, 62, 53, 0.05);
+  margin-top: 8px;
+}
+
+.saveBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(5, 150, 105, 0.25);
+  transition: all 180ms ease;
+}
+
+.saveBtn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(5, 150, 105, 0.35);
+}
+
+.saveBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.discardBtn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: rgba(18, 62, 53, 0.06);
+  color: #123e35;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  border: 1px solid rgba(18, 62, 53, 0.12);
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.discardBtn:hover:not(:disabled) {
+  background: rgba(18, 62, 53, 0.12);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

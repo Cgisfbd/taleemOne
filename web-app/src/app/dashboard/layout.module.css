@@ -1,0 +1,221 @@
+.dashboardShell {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================================
+   L-SHAPE SEAMLESS OPTICAL GLASS BASE & 32PX CURVES
+   ============================================================ */
+
+.lShapeGlassContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 16px 36px rgba(18, 62, 53, 0.06));
+}
+
+.lShapeGlassBase {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.8),
+    inset -1px 0 2px rgba(0, 0, 0, 0.02);
+  pointer-events: auto;
+  overflow: hidden;
+  will-change: clip-path;
+  transition: clip-path 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* PERFECT L-SHAPE OUTLINE & 32PX CORNER GOLAYI (MATCHING DASHBOARD CARDS) */
+.lShapeOutline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 15;
+}
+
+.outlineTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.outlineLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.outlineRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 56px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.outlineBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.75);
+  transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.outlineBottomCollapsed {
+  width: 68px;
+}
+
+.outlineBottomExpanded {
+  width: 256px;
+}
+
+.outlineSidebarRight {
+  position: absolute;
+  top: 120px;
+  bottom: 32px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.75);
+  transition: left 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.outlineSidebarRightCollapsed {
+  left: 98px;
+}
+
+.outlineSidebarRightExpanded {
+  left: 286px;
+}
+
+.outlineTopbarBottom {
+  position: absolute;
+  top: 86px;
+  right: 32px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.75);
+  transition: left 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.outlineTopbarBottomCollapsed {
+  left: 132px;
+}
+
+.outlineTopbarBottomExpanded {
+  left: 320px;
+}
+
+/* 1. Topbar End Curve: 32px rounded-br */
+.cornerTopbarEnd {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  border-bottom-right-radius: 32px;
+}
+
+/* 2. Sidebar Bottom Corner Curve: 32px rounded-br */
+.cornerSidebarBottom {
+  position: absolute;
+  bottom: 0;
+  width: 32px;
+  height: 32px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  border-bottom-right-radius: 32px;
+  transition: left 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cornerSidebarBottomCollapsed {
+  left: 68px;
+}
+
+.cornerSidebarBottomExpanded {
+  left: 256px;
+}
+
+/* 3. Inner Junction Concave Curve: 32px rounded-tl */
+.cornerInnerJunction {
+  position: absolute;
+  top: 86px;
+  width: 34px;
+  height: 34px;
+  border-top: 2px solid rgba(255, 255, 255, 0.75);
+  border-left: 2px solid rgba(255, 255, 255, 0.75);
+  border-top-left-radius: 32px;
+  transition: left 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cornerInnerJunctionCollapsed {
+  left: 98px;
+}
+
+.cornerInnerJunctionExpanded {
+  left: 286px;
+}
+
+/* Foreground Container */
+.foregroundContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  width: 100%;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  position: relative;
+}
+
+.contentScrollArea {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px 32px 48px 32px;
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 1023px) {
+  .lShapeGlassContainer,
+  .lShapeOutline {
+    display: none;
+  }
+
+  .foregroundContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contentScrollArea {
+    padding: 16px 14px 36px 14px;
+  }
+}
+

@@ -1,0 +1,41 @@
+.stardustCanvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fde047 10%, #d97706 60%, transparent 100%);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
+  animation: float-drift var(--duration, 7s) infinite ease-in-out var(--delay, 0s);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+@keyframes float-drift {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.6);
+  }
+  25% {
+    opacity: var(--peak-opacity, 0.85);
+  }
+  65% {
+    opacity: var(--peak-opacity, 0.75);
+    transform: translateY(-40px) translateX(var(--drift-x, 15px)) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-90px) translateX(var(--drift-x, 30px)) scale(0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stardustCanvas {
+    display: none;
+  }
+}

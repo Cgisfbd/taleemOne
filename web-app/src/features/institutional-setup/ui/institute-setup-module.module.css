@@ -1,0 +1,179 @@
+.moduleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 96px;
+}
+
+/* Sub-Tab Navigation Bar */
+.subTabsNav {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.subTabBtn {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    0 4px 14px rgba(18, 62, 53, 0.04);
+}
+
+.subTabBtn:hover {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(217, 119, 6, 0.4);
+  transform: translateY(-1px);
+}
+
+.subTabBtnActive {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(217, 119, 6, 0.55) !important;
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    0 8px 24px rgba(217, 119, 6, 0.14) !important;
+  transform: translateY(-1px);
+}
+
+.subTabIconPod {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(18, 62, 53, 0.75);
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.9);
+  transition: all 180ms ease;
+}
+
+.subTabBtn:hover .subTabIconPod {
+  color: #d97706;
+  border-color: rgba(217, 119, 6, 0.3);
+}
+
+.subTabBtnActive .subTabIconPod {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.8),
+    0 4px 12px rgba(217, 119, 6, 0.35);
+  transform: scale(1.05);
+}
+
+.subTabMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.subTabTitle {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #123e35;
+  margin: 0;
+}
+
+.subTabBtnActive .subTabTitle {
+  color: #b45309;
+}
+
+.subTabSubtitle {
+  font-size: 0.75rem;
+  color: rgba(18, 62, 53, 0.65);
+  margin: 0;
+}
+
+/* Loading & Error Banners */
+.loadingShell {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.loadingSpinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(217, 119, 6, 0.2);
+  border-top-color: #d97706;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+.loadingText {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #123e35;
+}
+
+.errorBanner {
+  padding: 20px 24px;
+  border-radius: 10px;
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.errorText {
+  color: #be123c;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.retryBtn {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #be123c;
+  color: #ffffff;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.retryBtn:hover {
+  background: #9f1239;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .subTabsNav {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,153 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.emptyState {
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(18, 62, 53, 0.04);
+  border: 1px dashed rgba(18, 62, 53, 0.18);
+  color: rgba(18, 62, 53, 0.6);
+  font-size: 0.8125rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.paragraphCard {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #b45309;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: rgba(244, 63, 94, 0.7);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms ease;
+}
+
+.removeBtn:hover {
+  background: rgba(244, 63, 94, 0.15);
+  color: #be123c;
+}
+
+.inputsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.textareaField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 22px;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(18, 62, 53, 0.75);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 70px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.8125rem;
+  color: #123e35;
+  outline: none;
+  resize: vertical;
+  transition: all 180ms ease;
+}
+
+.textarea:focus {
+  background: #ffffff;
+  border-color: #d97706;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.2);
+}
+
+.textareaUrdu {
+  direction: rtl;
+  font-family: var(--font-nastaliq), serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.textareaHindi {
+  font-family: var(--font-devanagari), sans-serif;
+}
+
+.addBtn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 38px;
+  padding: 0 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, #123e35 0%, #0d5f4e 100%);
+  color: #ffffff;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(18, 62, 53, 0.18);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.addBtn:hover {
+  background: linear-gradient(135deg, #184f44 0%, #106f5c 100%);
+  box-shadow: 0 4px 14px rgba(18, 62, 53, 0.28);
+  transform: translateY(-1px);
+}
+
+.addBtn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+  .inputsGrid {
+    grid-template-columns: 1fr;
+  }
+}

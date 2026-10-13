@@ -1,0 +1,326 @@
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  width: 288px;
+  background: transparent;
+  border-right: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 40;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.sidebarCollapsed {
+  width: 100px;
+}
+
+/* Brand Section: Clickable Logo to Toggle Collapse */
+.brandHeader {
+  height: 88px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.brandHeader:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: -2px;
+}
+
+.sidebarCollapsed .brandHeader {
+  padding: 0;
+  justify-content: center;
+}
+
+.sidebarCollapsed .navItem {
+  justify-content: center;
+  padding: 0;
+}
+
+/* 1. Expanded Brand Identity Frosted Glass Card (Matching Frontend) */
+.brandCardExpanded {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  width: 100%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.40);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95),
+    0 4px 16px rgba(18, 62, 53, 0.05);
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.brandHeader:hover .brandCardExpanded {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(217, 119, 6, 0.45);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    0 6px 20px rgba(217, 119, 6, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Logo Pod */
+.brandLogoPod {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95),
+    0 2px 6px rgba(18, 62, 53, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* 2. Collapsed Brand Identity Frosted Glass Card */
+.brandCardCollapsed {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95),
+    0 4px 16px rgba(18, 62, 53, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  margin: 0 auto;
+}
+
+.brandHeader:hover .brandCardCollapsed {
+  background: rgba(255, 255, 255, 0.58);
+  border-color: rgba(217, 119, 6, 0.5);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    0 6px 20px rgba(217, 119, 6, 0.16);
+  transform: scale(1.06);
+}
+
+.brandLogo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(18, 62, 53, 0.18));
+  flex-shrink: 0;
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Original Brand Text & Fonts (100% Preserved) */
+.brandText {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #123e35;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: opacity 180ms ease;
+}
+
+.productBadge {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #d97706;
+  font-weight: 800;
+  margin-left: 4px;
+}
+
+/* Nav Menu */
+.navSection {
+  flex: 1;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.navSectionLabel {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(18, 62, 53, 0.55);
+  padding: 6px 14px 4px 14px;
+  white-space: nowrap;
+  transition: opacity 180ms ease;
+}
+
+/* Premium Optical Glass Nav Item Button */
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 46px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #123e35;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.885rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon Glass Pod */
+.navIconWrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: rgba(18, 62, 53, 0.8);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.75);
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover State */
+.navItem:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.22) 100%);
+  border-color: rgba(255, 255, 255, 0.75);
+  color: #0d3b38;
+  transform: translateX(3px);
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.85),
+    0 6px 16px rgba(18, 62, 53, 0.05);
+}
+
+.navItem:hover .navIconWrapper {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(217, 119, 6, 0.35);
+  color: #d97706;
+  transform: scale(1.06);
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.9),
+    0 3px 8px rgba(217, 119, 6, 0.15);
+}
+
+/* Active State: Luminous Amber Rim & Pod */
+.navItemActive {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.3) 100%);
+  border-color: rgba(217, 119, 6, 0.45);
+  color: #123e35;
+  box-shadow:
+    inset 0 1.5px 2.5px rgba(255, 255, 255, 0.95),
+    inset 3px 0 0 #d97706,
+    0 8px 24px rgba(217, 119, 6, 0.14);
+}
+
+.navItemActive .navIconWrapper {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border-color: rgba(255, 255, 255, 0.65);
+  color: #ffffff;
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.75),
+    0 4px 12px rgba(217, 119, 6, 0.35);
+  transform: scale(1.04);
+}
+
+.navItemActive:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.38) 100%);
+  border-color: rgba(217, 119, 6, 0.65);
+  transform: translateX(3px);
+}
+
+.navLabel {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.navActiveDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #d97706;
+  box-shadow: 0 0 10px #f59e0b;
+  flex-shrink: 0;
+}
+
+
+
+
+
+/* Mobile Overlay */
+.mobileBackdrop {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 288px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-right: 1px solid rgba(255, 255, 255, 0.45);
+    transform: translateX(-100%);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  .sidebarMobileOpen {
+    transform: translateX(0);
+  }
+
+  .mobileBackdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(9, 13, 16, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 35;
+  }
+}
