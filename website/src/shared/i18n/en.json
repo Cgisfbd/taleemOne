@@ -1,0 +1,620 @@
+{
+  "common": {
+    "appName": "Jamia Barkat-e-Haram",
+    "tagline": "Girls' Islamic Studies Centre",
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "submit": "Submit",
+    "search": "Search",
+    "cancel": "Cancel",
+    "viewAll": "View All",
+    "download": "Download",
+    "verify": "Verify",
+    "accept": "Accept",
+    "back": "Back"
+  },
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "studentPortal": "Student Portal",
+    "placementCell": "Placement Cell",
+    "courses": "Courses & Syllabus",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "admissionOpen": "Admission Open",
+    "applyNow": "Apply Online",
+    "topNotice": "✨ Admissions Open 2026-27 | Up to 100% Scholarship Entrance Test | Global Online & Offline Classes",
+    "helpline": "Helpline",
+    "appDownload": "Get Mobile App",
+    "coursesList": {
+      "muftiya": "Takhassus Fil Ifta (Muftiya)",
+      "muftiyaDesc": "Global Live Online & Offline Campus",
+      "darsNizami": "Dars-e-Nizami (Alimah Course)",
+      "darsNizamiDesc": "Full-Time Campus & Flexible Batches",
+      "hifz": "Hifz-o-Tajweed & Qira'at",
+      "hifzDesc": "Smart Audio-Visual Labs & Tajweed",
+      "smartClasses": "Digital Smart Classes",
+      "smartClassesDesc": "Computer, Spoken English & Modern Skills"
+    },
+    "studentPortalList": {
+      "entranceApply": "Entrance Test Application",
+      "entranceApplyDesc": "Register for scholarship entrance exam",
+      "admitCard": "Download Admit Card",
+      "admitCardDesc": "Get entrance & semester hall ticket",
+      "examResult": "Results & Marksheet",
+      "examResultDesc": "Check scorecard & entrance merit",
+      "documentVerify": "Certificate Verification",
+      "documentVerifyDesc": "Verify student certificate & credentials"
+    },
+    "placementList": {
+      "teacherRegister": "Teacher / Muallima Registration",
+      "teacherRegisterDesc": "Register as qualified teacher for madarsas",
+      "madarsaRequest": "Madarsa Staff Request",
+      "madarsaRequestDesc": "Hire verified female teachers at zero cost"
+    }
+  },
+  "footer": {
+    "rightsReserved": "All Rights Reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "address": "Jamia Barkat-e-Haram Campus, India",
+    "contactUs": "Contact Us",
+    "securityBadge": "7-Layer Cyber Defense Secured",
+    "description": "We provide Islamic and modern education for girls in a safe and nurturing environment, with hostel facilities and strong moral upbringing.",
+    "socialMedia": "Official Social Media",
+    "payUpiTitle": "Pay using UPI",
+    "payUpiBtn": "Pay using UPI",
+    "bankCardBtn": "Bank Transfer",
+    "downloadAndroid": "Download Android App",
+    "downloadIos": "Download iOS App",
+    "designedBy": "Designed & Developed by",
+    "developerName": "Nizam-e-Taleem",
+    "scrollTop": "Top"
+  },
+  "hero": {
+    "badge": "✨ India's Premier Digital Smart Classroom Islamic Centre for Girls",
+    "exploreCourses": "Explore Courses & Syllabus",
+    "studentPortal": "Student Portal",
+    "applyOnline": "Apply for Admission",
+    "slides": [
+      {
+        "tag": "Smart Digital Education",
+        "title": "Digital Smart Classes & Interactive Projectors",
+        "subtitle": "Traditional Islamic curriculum delivered via interactive smart panels, projectors, and recorded video archives."
+      },
+      {
+        "tag": "Safe Islamic Campus",
+        "title": "Shar'i Purdah & Dedicated Residential Campus",
+        "subtitle": "Safe, serene hostel environment fostering deep Islamic character, discipline, and spiritual growth for female students."
+      },
+      {
+        "tag": "Classical Scholarship",
+        "title": "Comprehensive Dars-e-Nizami & Ifta Specialization",
+        "subtitle": "Rigorous classical scholarship for Alimah, Fazilah, and Muftiya programs in live online and on-campus modes."
+      },
+      {
+        "tag": "Quranic Sciences",
+        "title": "Hifz, Tajweed & Beautiful Qira'at",
+        "subtitle": "Sanad-certified female scholars teaching Quran memorization and phonetic precision."
+      },
+      {
+        "tag": "100% Scholarship",
+        "title": "Jamia 100% Scholarship & Merit Entrance Test",
+        "subtitle": "100% Free education, residential boarding, and sustenance for meritorious and deserving female scholars."
+      }
+    ],
+    "highlights": {
+      "scholarship": "100% Scholarship",
+      "scholarshipSub": "Merit & Deserving Girls",
+      "smartClass": "Digital Smart Panels",
+      "smartClassSub": "Interactive modern learning",
+      "hybridIfta": "Takhassus Fil Ifta",
+      "hybridIftaSub": "Online & On-Campus"
+    }
+  },
+  "programsSection": {
+    "badge": "⚡ Modern Digital Smart Education",
+    "title": "Flagship Academic Programs",
+    "subtitle": "Harmonious integration of classical Islamic scholarship delivered via interactive smart panels, projectors, and global live streaming.",
+    "viewAll": "Explore Complete Curriculum & Syllabus",
+    "muftiya": {
+      "tag": "Takhasus fil-Ifta",
+      "badge": "Online & On-Campus",
+      "title": "Takhassus Fil Ifta (Muftiya Course)",
+      "desc": "Advanced post-graduate specialization in Islamic Jurisprudence (Fiqh), research methodology, and practical fatwa drafting.",
+      "f1": "Interactive digital smart panels with two-way audio-visual live stream",
+      "f2": "Global online live access for students across India and abroad",
+      "f3": "Practical fatwa formulation under senior Muftis and certified scholars",
+      "f4": "Complete mobile app lecture archives and digital research library",
+      "cta": "View Takhassus Fil Ifta Details",
+      "modeChip": "Online + Offline"
+    },
+    "darsNizami": {
+      "tag": "Alimah & Fazilah Track",
+      "badge": "Smart Digital Classroom",
+      "title": "Dars-e-Nizami (Alimah & Fazilah Program)",
+      "desc": "Comprehensive traditional Islamic curriculum covering Quran, Hadith, Fiqh, and Arabic grammar taught on interactive digital boards.",
+      "f1": "Projector-enabled smart classes with multimedia diagrammatic analysis",
+      "f2": "Full-time campus broadcast and flexible modular batches for busy students",
+      "f3": "100% purdah-compliant, secure, and nurturing academic environment",
+      "f4": "1080p high-definition class recordings accessible 24/7 on student app",
+      "cta": "View Dars-e-Nizami Curriculum",
+      "modeChip": "Full-Time / Flexible"
+    }
+  },
+  "aboutFounderSection": {
+    "badge": "🏛️ About & Founder's Message",
+    "title": "About Institution & Founder's Vision",
+    "subtitle": "Discover the legacy, values, and noble vision behind Jamia Barkat-e-Haram.",
+    "about": {
+      "tag": "About Institution",
+      "title": "Jamia Barkat-e-Haram: Harmonizing Tradition & Digital Literacy",
+      "desc": "Jamia Barkat-e-Haram (Girls' Islamic Studies Centre) is an esteemed premier seat of higher Islamic scholarship and ethical nurturing for young women. Within a strictly purdah-compliant and secure campus, classical Dars-e-Nizami, Takhassus Fil Ifta, and Hifz curricula are delivered via interactive smart panels and digital classrooms.",
+      "p1": "Scholarly guidance under certified female scholars and senior Muftis",
+      "p2": "Safe, serene residential hostel for outstation female students",
+      "p3": "100% merit and need-based full educational sponsorships",
+      "cta": "Explore Full Institutional Profile"
+    },
+    "founder": {
+      "tag": "Founder's Message",
+      "title": "Message from Founder Hazrat Maulana Mufti Shamshad Ahmad",
+      "author": "Hazrat Maulana Mufti Shamshad Ahmad Sahab",
+      "role": "Founder & Chief Patron, Jamia Barkat-e-Haram",
+      "quote": "In the Name of Allah, the Most Beneficent, the Most Merciful. In today's challenging era, illuminating the hearts of our daughters and sisters with authentic Islamic knowledge, modesty, and righteous character is of paramount importance. Jamia Barkat-e-Haram is committed to preparing dedicated female scholars and Muftiyas who will radiate divine knowledge and nurture future generations with pious values.",
+      "cta": "Read Founder's Full Message"
+    }
+  },
+  "visionSection": {
+    "badge": "🎯 5-Year Vision & Strategic Roadmap",
+    "title": "6 Core Strategic Goals of Jamia",
+    "subtitle": "Our visionary five-year roadmap to elevate women's Islamic scholarship, campus infrastructure, and Shariah guidance.",
+    "officialTag": "Official • Girls' Islamic Studies Centre",
+    "g1_num": "01",
+    "g1_tag": "Digital Panels",
+    "g1_title": "Smart Panels in Every Classroom (2-Year Goal)",
+    "g1_desc": "Equipping 100% of Jamia's classrooms with high-definition interactive smart digital panels within the next 2 years.",
+    "g2_num": "02",
+    "g2_tag": "Campus Expansion",
+    "g2_title": "Campus & Residential Hostel Expansion",
+    "g2_desc": "Constructing new residential rooms and academic halls to expand student accommodation and boarding capacity safely.",
+    "g3_num": "03",
+    "g3_tag": "Islamic Library",
+    "g3_title": "Establishment of a Grand Central Islamic Library",
+    "g3_desc": "Creating a comprehensive reference library housing thousands of classical and authentic texts on Tafseer, Hadith, and Islamic Jurisprudence.",
+    "g4_num": "04",
+    "g4_tag": "Teacher Training",
+    "g4_title": "Tadreeb-ul-Muallimaat (Pedagogical Training Workshops)",
+    "g4_desc": "Conducting annual teacher-training workshops to enhance pedagogical skills and student psychological guidance.",
+    "g5_num": "05",
+    "g5_tag": "Online Reach",
+    "g5_title": "1,000+ Students Online Enrollment Milestone",
+    "g5_desc": "Connecting over 1,000 female scholars across India and abroad through live interactive two-way digital classrooms.",
+    "g6_num": "06",
+    "g6_tag": "Shariah Guidance",
+    "g6_title": "Women's Darul Ifta & Shariah Guidance Helpline",
+    "g6_desc": "Dedicated guidance helpline providing authenticated Shariah solutions for women's personal, family, and religious queries."
+  },
+  "teacherPlacement": {
+    "badge": "🤝 Community Placement Cell",
+    "title": "Center for Graduate Scholars & Teachers Placement",
+    "subtitle": "A trusted platform providing seminaries with competent female scholars and graduates with dignified teaching roles.",
+    "teacherCard": {
+      "tag": "For Female Scholars & Teachers",
+      "badge": "Dignified Teaching",
+      "title": "Seeking a Dignified Teaching Opportunity at an Islamic Institution?",
+      "desc": "Connecting graduate Alimahs, Muftiyas, and Qariyas with reputable Islamic institutions and schools nationwide.",
+      "f1": "100% Shariah purdah-compliant and respectful environment",
+      "f2": "Satisfactory remuneration and reputable placements",
+      "cta": "Teacher Registration Form"
+    },
+    "madarsaCard": {
+      "tag": "For Seminaries & Schools",
+      "badge": "Qualified Faculty",
+      "title": "Does Your Seminary or School Require Competent Female Teachers?",
+      "desc": "Select authenticated, experienced, and pious female scholars for your institution through Jamia's official matching service.",
+      "f1": "Officially verified academic credentials & ethical background check",
+      "f2": "Extensive directory of qualified Alimahs, Muftiyas & Qariyas",
+      "cta": "Madarsa Demand Form"
+    },
+    "stat1Value": "250+",
+    "stat1Label": "Registered Teachers",
+    "stat1Sub": "Alimahs & Muftiyas",
+    "stat2Value": "120+",
+    "stat2Label": "Connected Seminaries",
+    "stat2Sub": "India & Overseas",
+    "stat3Value": "95+",
+    "stat3Label": "Successful Placements",
+    "stat3Sub": "Dignified Teaching Roles"
+  },
+  "noticeBoard": {
+    "badge": "📢 Official Announcements • Live Notice Board",
+    "title": "Notice Board",
+    "subtitle": "Important announcements, examination schedules, admissions, and campus updates from Jamia Barkat-e-Haram.",
+    "tapToView": "Tap to view full notice",
+    "downloadNotice": "Download Notice",
+    "closeModal": "Close",
+    "notices": [
+      {
+        "id": "not-1",
+        "date": "16 Aug 2026",
+        "title": "Admission Open for 2026-27 Session",
+        "image": "https://i.ibb.co/1tmT1Mjc/Screenshot-20250624-215649.jpg"
+      },
+      {
+        "id": "not-2",
+        "date": "10 Aug 2026",
+        "title": "Annual Exam Results Announced",
+        "image": "https://i.ibb.co/KzSwj1Dt/1750783118094.jpg"
+      },
+      {
+        "id": "not-3",
+        "date": "05 Aug 2026",
+        "title": "Summer Vacation Ended",
+        "image": "https://i.ibb.co/tPM1KbxT/Screenshot-20250626-000045.jpg"
+      },
+      {
+        "id": "not-4",
+        "date": "01 Aug 2026",
+        "title": "New Hostel Facilities Started",
+        "image": "https://i.ibb.co/4RJM2wkP/Screenshot-20250626-121201.jpg"
+      }
+    ]
+  },
+  "donation": {
+    "badge": "Online Donation & Taawun",
+    "boxTitle": "Support Girls' Education",
+    "boxSub": "100% Scholarship Fund",
+    "trustAegis": "Operated Under Mujaddid Alf Sani Education and Welfare Trust (Regd.)",
+    "trustDesc": "Jamia Barkat-e-Haram is an established educational institution founded, operated, and managed under Mujaddid Alf Sani Education and Welfare Trust (A Registered Non-Profit Charitable Trust).",
+    "heroTitle": "Support Girls' Higher Islamic & Contemporary Education",
+    "heroDesc": "100% of your generous donations directly fund scholarships, digital smart classrooms, and free quality education for deserving female students.",
+    "qrTitle": "Instant UPI & QR Code",
+    "qrSub": "Scan using Google Pay, PhonePe, Paytm, BHIM or any UPI App",
+    "payUpiBtn": "Pay via UPI App",
+    "bankCardBtn": "Bank Transfer",
+    "bankTitle": "Official Trust Bank Account Details (NEFT / RTGS / IMPS)",
+    "bankSub": "Mujaddid Alf Sani Education and Welfare Trust Official Account",
+    "accNameLabel": "Account Holder (Trust) Name",
+    "accNameVal": "Mujaddid Alf Sani Education and Welfare Trust",
+    "accNumLabel": "Account Number",
+    "accNumVal": "50200089234512",
+    "ifscLabel": "IFSC Code",
+    "ifscVal": "HDFC0001234",
+    "bankNameLabel": "Bank Name",
+    "bankNameVal": "HDFC Bank Ltd.",
+    "branchLabel": "Branch Location",
+    "branchVal": "Hazratganj / Main Campus Branch, India",
+    "accTypeLabel": "Account Type",
+    "accTypeVal": "Current / Trust Account",
+    "upiIdLabel": "Official Trust UPI ID",
+    "upiIdVal": "jamiabarkateharam@hdfcbank",
+    "copyBtn": "Copy",
+    "copiedBtn": "Copied!",
+    "verifiedTrust": "Mujaddid Alf Sani Education and Welfare Trust (Regd.) Official Account.",
+    "receiptTitle": "Official Donation Receipt",
+    "receiptDesc": "Send payment confirmation screenshot on WhatsApp or Helpline to receive instant official stamped donation receipt from Mujaddid Alf Sani Education and Welfare Trust.",
+    "whatsappReceipt": "Send Screenshot on WhatsApp",
+    "helplineCall": "Call Helpline",
+    "taxExempt": "100% Transparent & Secure Transaction",
+    "impactTitle": "How Your Contribution Empowers Girls",
+    "impact1Title": "Full Scholarship",
+    "impact1Desc": "Covers 100% free tuition fees, hostel accommodation, and meals for deserving students.",
+    "impact2Title": "Smart Classroom Tech",
+    "impact2Desc": "Digital interactive panels, hybrid recording, and modern IT lab.",
+    "impact3Title": "Qualified Faculty",
+    "impact3Desc": "Sustaining top female Islamic scholars and contemporary educators."
+  },
+  "privacyPage": {
+    "badge": "Privacy & Data Protection Charter",
+    "title": "Jamia Barkat-e-Haram Privacy Policy",
+    "subtitle": "Shar'i Purdah Protection, Student Confidentiality & 7-Layer Enterprise Cyber Defense Protocols.",
+    "lastUpdated": "Last Updated: August 2026 | Document Ref: JBH-DPP-2026",
+    "pardaBannerTitle": "Sacred Shar'i Purdah & Absolute Student Identity Protection",
+    "pardaBannerDesc": "Safeguarding the sacred modesty, dignity, and personal identity of female students is Jamia's foremost religious mandate. Photographs and personal details are strictly confidential and never published online.",
+    "sections": [
+      {
+        "id": "scope",
+        "title": "1. Scope & Islamic Philosophy of Confidentiality",
+        "desc": "This Privacy Policy governs data collected across Jamia Barkat-e-Haram's web portal, student ERP system, scholarship entrance examination portal, and digital classroom applications. As an Islamic higher education institution for women, we adhere to the highest standards of Islamic Shari'ah and data privacy."
+      },
+      {
+        "id": "data-collected",
+        "title": "2. Information Collected from Students & Guardians",
+        "desc": "We collect verified essential data solely for academic operations: (a) Student's legal name, date of birth, and identity documentation; (b) Verified parent/guardian contact and residential address; (c) Prior madarsa/school credentials and entrance exam scores; (d) Smart class attendance and academic grades; (e) Fee and scholarship fund transaction references."
+      },
+      {
+        "id": "purdah-guarantee",
+        "title": "3. Strict Shar'i Purdah & Non-Disclosure Guarantee",
+        "desc": "Students' personal photos, personal phone numbers, and home addresses are never published online, indexed by search engines, or shared with commercial entities. Live digital smart classes are conducted exclusively by certified female scholars (Muallimat) with full camera-off / audio-only options for students."
+      },
+      {
+        "id": "cyber-security",
+        "title": "4. 7-Layer Enterprise Cyber Defense & Military-Grade Encryption",
+        "desc": "All student databases and academic records are guarded by: (1) SSL/TLS v1.3 256-bit military-grade encryption; (2) SHA-256 cryptographic hashing for credentials; (3) Anti-scraping edge firewalls; (4) Cloudflare DDoS shield; (5) SQL Injection & XSS security filters; (6) Automated daily encrypted backups; (7) Multi-factor administrative access."
+      },
+      {
+        "id": "recordings",
+        "title": "5. Smart Classroom Video & Lecture Recording Guidelines",
+        "desc": "Smart class recordings are archived strictly for students' academic revision in the secure app. Unauthorized downloading, screen recording, commercial use, or re-uploading to YouTube/Telegram is strictly prohibited and subject to legal and disciplinary action."
+      },
+      {
+        "id": "cookies",
+        "title": "6. Zero-Commercial-Tracking Policy & Local Storage",
+        "desc": "Our platform operates on a zero-commercial-tracking policy. Browser local storage is used solely for core user preferences: (a) Language selection (English, Urdu, Hindi, Arabic); (b) Dark/Light theme mode. We do not run third-party advertising cookies."
+      },
+      {
+        "id": "financial",
+        "title": "7. Financial Data, UPI & Donation Privacy",
+        "desc": "All online contributions, zakat, and scholarship transactions are handled directly through authorized banking gateways (HDFC Bank Ltd.). Jamia never stores debit card credentials or UPI PINs. Bank transaction IDs are stored solely for official receipt generation and auditing."
+      },
+      {
+        "id": "no-sell",
+        "title": "8. Strict No-Commercialization & Non-Disclosure Policy",
+        "desc": "Jamia Barkat-e-Haram does not sell, rent, or trade student, parent, or donor data to marketing agencies or third-party corporations under any circumstances."
+      },
+      {
+        "id": "rights",
+        "title": "9. Student & Guardian Rights",
+        "desc": "Enrolled students and guardians hold the right to inspect their ERP academic records, request prompt correction of typographical errors, and request data archiving upon course completion."
+      },
+      {
+        "id": "contact-officer",
+        "title": "10. Institutional Data Protection & Grievance Contact",
+        "desc": "For privacy inquiries, data rectification, or grievance redressal, contact our Chief Data Protection Officer at cgisbarkateharam@gmail.com | Helpline: +91 70806 54147 / +91 94151 46640 | Address: Jamia Barkat-e-Haram Campus, India."
+      }
+    ]
+  },
+  "termsPage": {
+    "badge": "Academic & Legal Framework",
+    "title": "Terms & Conditions",
+    "subtitle": "Jamia Barkat-e-Haram's Institutional Rules, Entrance Examination Guidelines, Smart Class Protocols & Code of Conduct.",
+    "lastUpdated": "Last Updated: August 2026 | Document Ref: JBH-TOS-2026",
+    "sections": [
+      {
+        "id": "agreement",
+        "title": "1. Legal Agreement & Institutional Jurisdiction",
+        "desc": "By accessing Jamia Barkat-e-Haram's website, student ERP portal, mobile apps, or smart classrooms, you agree to be bound by these Terms, the Institutional Constitution, and all administrative decisions of Mujaddid Alf Sani Education and Welfare Trust."
+      },
+      {
+        "id": "admission-rules",
+        "title": "2. Academic Eligibility & Admission Guidelines",
+        "desc": "Admissions to Takhasus fil-Ifta (Muftiya Course), Dars-e-Nizami (Alima & Fazila), Hifz-o-Tajweed, and Modular programs are awarded strictly on merit. Submitting forged documents or false declarations will lead to immediate cancellation of admission and forfeiture of scholarship."
+      },
+      {
+        "id": "entrance-test",
+        "title": "3. Jamia Institutional Scholarship & Admission Test Rules",
+        "desc": "Applicants registered for Jamia Barkat-e-Haram's internal scholarship and entrance examination must download their official admit card from the portal. Malpractice, impersonation, or unauthorized electronic device usage during tests results in permanent disqualification."
+      },
+      {
+        "id": "scholarship-charter",
+        "title": "4. Jamia 100% Scholarship Charter & Maintenance Criteria",
+        "desc": "This 100% scholarship is funded and awarded directly by Jamia Barkat-e-Haram under Mujaddid Alf Sani Education and Welfare Trust (not affiliated with any government scheme). It covers 100% tuition fees, hostel accommodation, and meals. Admission fees must be paid at enrollment, and curriculum books must be purchased by the student. To maintain the scholarship, a student must: (a) Maintain a minimum 85% attendance across classes; (b) Achieve at least 70% aggregate marks in semester examinations; (c) Uphold institutional moral and Shar'i conduct."
+      },
+      {
+        "id": "code-of-conduct",
+        "title": "5. Student Code of Conduct (Campus & Online)",
+        "desc": "Students are expected to exemplify noble Islamic character (Akhlaaq), mutual respect, and academic diligence. Sharing live lecture links, spamming in class chats, or violating Shar'i Purdah protocols during video sessions is strictly prohibited."
+      },
+      {
+        "id": "intellectual-property",
+        "title": "6. Intellectual Property & Digital Curriculum Copyright",
+        "desc": "All curriculum materials, lectures, courseware, fatwa archives, and portal software are the exclusive intellectual property of Jamia Barkat-e-Haram. Screen recording, unauthorized redistribution on YouTube/Telegram, or commercial exploitation is illegal and subject to copyright law."
+      },
+      {
+        "id": "qr-verification",
+        "title": "7. Official Sanad (Degree) & Certificate QR Verification",
+        "desc": "Every authentic Sanad and Certificate issued by Jamia Barkat-e-Haram carries a tamper-evident cryptographic QR code. Official credential verification is valid solely via jamiabarkateharam.edu/students/verify."
+      },
+      {
+        "id": "teacher-placement",
+        "title": "8. Zero-Cost Female Teacher Placement Cell",
+        "desc": "Jamia's Teacher Placement Cell operates purely on a non-commercial, philanthropic basis to connect qualified female scholars (Muallimat) with requesting Islamic institutions at zero fees or commission."
+      },
+      {
+        "id": "donation-policy",
+        "title": "9. Voluntary Donations, Zakat & Non-Refund Policy",
+        "desc": "Online donations and zakat are directly utilized towards students' lodging, meals, and digital education. Once confirmed, contributions are non-refundable. Official donation receipts are issued immediately."
+      },
+      {
+        "id": "dispute-resolution",
+        "title": "10. Dispute Resolution & Legal Jurisdiction",
+        "desc": "Jamia administration reserves the right to amend academic calendars, syllabus modules, and institutional guidelines. In case of any dispute, the decision of Mujaddid Alf Sani Education and Welfare Trust is final and binding under local jurisdiction."
+      }
+    ]
+  },
+  "galleryPage": {
+    "badge": "🖼️ Visual Highlights • Campus Gallery",
+    "title": "Gallery",
+    "subtitle": "Explore moments from Jamia Barkat-e-Haram's lush campus, smart digital classrooms, student hostel, annual convocations, and tarbiyah workshops.",
+    "searchPlaceholder": "Search photos, titles or year...",
+    "filterAll": "All Photos",
+    "filterCampus": "Campus & Building",
+    "filterClassroom": "Smart Classrooms",
+    "filterHostel": "Hostel & Living",
+    "filterEvents": "Events & Seminars",
+    "filterLibrary": "Maktabah & Library",
+    "filterTarbiyah": "Tarbiyah & Arts",
+    "downloadPhoto": "Download Photo",
+    "closePreview": "Close",
+    "noPhotosFound": "No photos found matching your criteria.",
+    "noPhotosDesc": "Please try searching with different keywords or switch your category filter.",
+    "resetFilter": "Show All Photos",
+    "showing": "Showing",
+    "itemsCount": "photos"
+  },
+  "coursesPage": {
+    "badge": "📚 Classical Islamic Scholarship & Smart Education",
+    "title": "Academic Programs & Curriculum",
+    "subtitle": "Discover comprehensive classical Islamic scholarship, Takhassus Fil Ifta (Muftiya), Dars-e-Nizami, and smart digital classrooms designed for female scholars worldwide.",
+    "searchPlaceholder": "Search by program name, book, subject or keyword...",
+    "clearSearch": "Clear search",
+    "showing": "Showing",
+    "coursesCount": "programs",
+    "filters": {
+      "all": "All Programs",
+      "ifta": "Takhassus Fil Ifta (Muftiya)",
+      "alimah": "Dars-e-Nizami (Alimah)",
+      "hifz": "Hifz & Tajweed",
+      "short": "Short & Skill Batches",
+      "scholarship": "100% Scholarship"
+    },
+    "modes": {
+      "all": "All Modes",
+      "hybrid": "Global Online Live",
+      "campus": "On-Campus Offline",
+      "modular": "Flexible Modular"
+    },
+    "labels": {
+      "duration": "Duration",
+      "eligibility": "Eligibility",
+      "mode": "Delivery Mode",
+      "language": "Medium of Instruction",
+      "credits": "Academic Level",
+      "scholarshipEligible": "100% Scholarship Eligible",
+      "viewSyllabus": "View Syllabus & Books",
+      "applyNow": "Apply Online",
+      "downloadBrochure": "Download Brochure",
+      "keySubjects": "Core Subjects",
+      "learningOutcomes": "Learning Outcomes",
+      "closeModal": "Close",
+      "syllabusOverview": "Curriculum Overview",
+      "semesterBreakdown": "Year / Semester Syllabus",
+      "coreBooks": "Prescribed Classical Texts",
+      "careerPaths": "Future Scholarly Roles",
+      "noCoursesFound": "No courses found matching your criteria.",
+      "noCoursesDesc": "Try searching with different keywords or reset your active filters.",
+      "resetFilter": "Show All Programs",
+      "shareCourse": "Share Program",
+      "copied": "Link Copied!"
+    },
+    "comparison": {
+      "badge": "📊 Program Comparison",
+      "title": "Comprehensive Academic Matrix",
+      "subtitle": "Compare key features, eligibility, duration, and delivery options to select the right educational path.",
+      "headers": {
+        "program": "Program",
+        "level": "Level",
+        "duration": "Duration",
+        "mode": "Delivery Mode",
+        "smartClasses": "Smart Digital Classes",
+        "scholarship": "100% Scholarship",
+        "certification": "Certification & Sanad"
+      }
+    },
+    "scholarshipBanner": {
+      "badge": "🏆 Mujaddid Alf Sani Education & Welfare Trust",
+      "title": "Up to 100% Free Jamia Scholarship Entrance Program",
+      "subtitle": "Meritorious and deserving female scholars receive up to 100% fully funded tuition, residential boarding, and food sponsorships by clearing Jamia's internal entrance exam.",
+      "highlight1": "Up to 100% Free Tuition & Hostel",
+      "highlight2": "Online & Offline Entrance Exam",
+      "highlight3": "Instant QR-Verified Results",
+      "ctaApply": "Apply for Scholarship Entrance",
+      "ctaResult": "Check Entrance Results"
+    },
+    "admissionRoadmap": {
+      "badge": "🗺️ Admission Roadmap",
+      "title": "4-Step Seamless Enrollment Process",
+      "subtitle": "Follow these simple steps to secure your admission to Jamia Barkat-e-Haram.",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Online Registration",
+          "desc": "Submit your entrance application with academic background via our web portal or mobile app."
+        },
+        {
+          "step": "02",
+          "title": "Download Admit Card",
+          "desc": "Instantly generate and download your cryptographic QR-verified examination hall ticket."
+        },
+        {
+          "step": "03",
+          "title": "Entrance Test & Interview",
+          "desc": "Appear for the digital online assessment or offline on-campus entrance evaluation."
+        },
+        {
+          "step": "04",
+          "title": "Merit & Orientation",
+          "desc": "Confirm your enrollment on merit release and begin your interactive smart classroom journey."
+        }
+      ]
+    },
+    "faq": {
+      "badge": "❓ Frequently Asked Questions",
+      "title": "Admissions & Curriculum Guidance",
+      "subtitle": "Common questions about hybrid learning, hostel safety, scholarships, and certification.",
+      "items": [
+        {
+          "question": "Can homemakers and working professionals enroll in online tracks?",
+          "answer": "Yes! Flagship courses including Takhassus Fil Ifta and Dars-e-Nizami are accessible globally through interactive live broadcasts, and 1080p recorded lectures are available 24/7 on the mobile app."
+        },
+        {
+          "question": "How can students qualify for the 100% Jamia scholarship?",
+          "answer": "Candidates who achieve merit in Jamia's internal entrance examination and meet need-based criteria receive full sponsorship covering tuition, lodging, and meals funded by Mujaddid Alf Sani Trust."
+        },
+        {
+          "question": "What is the prerequisite for Takhassus Fil Ifta (Muftiya Course)?",
+          "answer": "Applicants must hold an authentic Alimah / Fazilah Sanad (Dars-e-Nizami graduate) or equivalent Islamic degree from a recognized madarsa or institution."
+        },
+        {
+          "question": "Are issued Sanads and certificates verifiable globally?",
+          "answer": "Yes, every official credential issued by Jamia Barkat-e-Haram carries a tamper-evident QR code verifiable worldwide through our official verification portal."
+        },
+        {
+          "question": "What safety and Purdah provisions exist for campus residents?",
+          "answer": "Our residential campus maintains strict Shar'i Purdah protocols, round-the-clock female faculty supervision, and secure, peaceful hostel amenities."
+        }
+      ]
+    }
+  },
+  "portalPage": {
+    "badge": "🎓 Student Academic & Examination Portal",
+    "title": "Centralized Student Services Gateway",
+    "subtitle": "Access entrance registrations, admit cards, marksheet records, merit scorecards, and tamper-proof certificate verifications.",
+    "sessionTag": "Academic Session 2026-27 Active",
+    "searchPlaceholder": "Search by service (e.g. Entrance Form, Admit Card, Results, Verification)...",
+    "cards": {
+      "apply": {
+        "tag": "Up to 100% Scholarship",
+        "title": "Entrance Test Application",
+        "desc": "Register online for the up to 100% scholarship entrance examination for Alimah, Muftiya, and Hifz courses. Instant application number generation.",
+        "btn": "Apply for Entrance Test",
+        "features": ["Up to 100% Full Scholarship", "Instant Registration Slip", "Choice of Center / Online"]
+      },
+      "admit": {
+        "tag": "Hall Ticket",
+        "title": "Download Admit Card",
+        "desc": "Download official hall ticket with examination timing, instructions, roll number, and exam center allocation for upcoming tests.",
+        "btn": "Download Admit Card",
+        "features": ["Entrance & Semester Exams", "Print-Ready PDF Format", "QR Verification"]
+      },
+      "result": {
+        "tag": "Scorecard & Marksheet",
+        "title": "Examination Result",
+        "desc": "Check semester and annual academic results, subject-wise marks, grades, division, and download official marksheet transcript.",
+        "btn": "Check Examination Result",
+        "features": ["Subject-wise Breakdown", "Division & Grade Info", "Official Marksheet Download"]
+      },
+      "entranceResult": {
+        "tag": "Merit & Rankings",
+        "title": "Entrance Test Result",
+        "desc": "View your entrance test scores, merit rank, scholarship qualification status, and selection list for free hostel & education seats.",
+        "btn": "Check Entrance Result",
+        "features": ["Merit Rank List", "Scholarship Status", "Next Steps & Orientation"]
+      },
+      "verify": {
+        "tag": "Anti-Fraud Security",
+        "title": "Sanad & Marksheet Verification",
+        "desc": "Authenticate student Sanad (Alimah, Fazilah, Muftiya) and marksheets with official 7-layer QR code and roll number verification.",
+        "btn": "Verify Sanad & Marksheet",
+        "features": ["7-Layer Security Check", "Instant Sanad Validation", "Official Academic Seal"]
+      }
+    },
+    "help": {
+      "title": "Need Assistance with Student Services?",
+      "desc": "Our dedicated student helpdesk is available to assist you with registration, admit cards, or result queries.",
+      "phone": "+91 70806 54147",
+      "email": "help@jamiabarkateharam.edu",
+      "timings": "Mon - Sat: 9:00 AM - 5:00 PM IST"
+    }
+  }
+}

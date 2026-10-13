@@ -1,0 +1,312 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+        <title>Statement of Marks — Sample Student</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            @page{size:A4 portrait;margin:0}
+            *{margin:0;padding:0;box-sizing:border-box}
+            html,body{
+                font-family:'Inter',sans-serif;color:#1a1a1a;
+                -webkit-print-color-adjust:exact;print-color-adjust:exact;
+                height:100%;background:#ccc;
+            }
+            .pg{
+                width:210mm;height:297mm;
+                margin:20px auto;overflow:hidden;
+                padding:8mm 10mm;
+                display:flex;flex-direction:column;
+                background:#fff;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+
+            /* ── Banner ── */
+            .bnr img{width:100%;display:block;height:auto}
+            .accent{height:2.5px;background:linear-gradient(90deg,#5C1A35,#B8860B,#5C1A35);margin:0 0 4px}
+
+            /* ── Title ── */
+            .hdr{
+                text-align:center;
+                padding:5px 0 6px;border-bottom:1px solid #ddd;margin-bottom:6px
+            }
+            .hdr-title{
+                font-size:15pt;font-weight:800;color:#5C1A35;
+                letter-spacing:2.5px;text-transform:uppercase;
+                margin:0
+            }
+            .hdr-sub{
+                font-size:8pt;color:#666;font-weight:500;
+                letter-spacing:1px;margin-top:2px
+            }
+
+            /* ── Student Info ── */
+            .stu{
+                display:grid;grid-template-columns:1fr 1fr;
+                border:1px solid #d0c5a9;border-radius:3px;
+                margin-bottom:8px;overflow:hidden
+            }
+            .stu-r{display:flex;border-bottom:1px solid #e8e0d0}
+            .stu-r:last-child{border-bottom:none}
+            .stu-r.full{grid-column:1/-1}
+            .stu-l{
+                width:100px;padding:5px 10px;font-size:7pt;font-weight:700;
+                color:#5C1A35;text-transform:uppercase;letter-spacing:0.5px;
+                background:#faf8f3;border-right:1px solid #e8e0d0;
+                display:flex;align-items:center;flex-shrink:0
+            }
+            .stu-v{
+                flex:1;padding:5px 12px;font-size:9.5pt;font-weight:600;
+                color:#1a1a1a;display:flex;align-items:center
+            }
+
+            /* ── Marks Table ── */
+            table.mt{width:100%;border-collapse:collapse;margin-bottom:6px}
+            table.mt th{
+                background:#5C1A35;color:#fff;
+                font-size:7pt;font-weight:700;
+                padding:7px 4px;border:1px solid #4a1429;
+                text-align:center;vertical-align:middle;
+                text-transform:uppercase;letter-spacing:0.3px
+            }
+            table.mt th.ob{background:#6d2040}
+            table.mt th.uh{
+                font-family:'Noto Nastaliq Urdu',serif;
+                font-size:9.5pt;direction:rtl;
+                text-transform:none;letter-spacing:0;
+                font-weight:700;line-height:1.3;color:#f0d6a0
+            }
+            table.mt td{
+                padding:0 5px;border:1px solid #d4c5a9;
+                font-size:9pt;text-align:center;vertical-align:middle;
+                height:40px;max-height:40px;line-height:40px;
+                overflow:hidden;white-space:nowrap;text-overflow:ellipsis
+            }
+            .se{text-align:left!important;font-weight:600;padding-left:8px!important;font-size:8.5pt}
+            .nm{font-weight:600;color:#444}
+            .ob-t{font-weight:800;color:#5C1A35;font-size:10pt}
+            .fm{color:#c0392b!important;font-weight:800!important}
+            .gr{font-weight:700;font-size:9pt;color:#333}
+            .su{
+                font-family:'Noto Nastaliq Urdu',serif;
+                font-size:8.5pt;font-weight:600;
+                direction:rtl;text-align:right!important;
+                padding:0 8px!important;color:#222;
+                height:40px!important;max-height:40px!important;
+                line-height:40px!important;
+                overflow:hidden!important;white-space:nowrap!important;
+                text-overflow:ellipsis!important
+            }
+            .re td{background:#fff}
+            .ro td{background:#f9f7f3}
+            .tr-tot td{
+                font-weight:700;background:#f0ebe3!important;
+                font-size:10pt;border-top:2.5px solid #5C1A35
+            }
+            .tr-tot .ut{
+                font-family:'Noto Nastaliq Urdu',serif;
+                font-size:9.5pt;font-weight:700;
+                direction:rtl;text-align:right!important;
+                padding-right:8px!important;
+                line-height:40px!important;overflow:hidden!important
+            }
+
+            /* ── Result ── */
+            .res{
+                display:flex;align-items:center;
+                margin:8px 0;padding:10px 16px;
+                border-left:4px solid #5C1A35;
+                background:#faf8f3;
+                gap:0
+            }
+            .res-tag{
+                background:#5C1A35;color:#fff;
+                font-size:7pt;font-weight:800;
+                padding:4px 12px;border-radius:3px;
+                letter-spacing:1.5px;text-transform:uppercase;
+                margin-right:20px;white-space:nowrap
+            }
+            .res-stat{text-align:center;padding:0 20px}
+            .res-stat .rl{font-size:5.5pt;color:#999;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:2px}
+            .res-stat .rv{font-size:15pt;font-weight:800;color:#5C1A35;line-height:1.1}
+            .res-dot{width:4px;height:4px;background:#d4c5a9;border-radius:50%;flex-shrink:0}
+
+            /* ── Grade Scale ── */
+            .gs{
+                font-size:6.5pt;color:#777;line-height:1.5;
+                padding:3px 8px;text-align:center;
+                background:#faf8f5;border:1px solid #eee;border-radius:3px;
+                margin-bottom:4px
+            }
+            .gs b{color:#5C1A35}
+
+            /* ── Signature & Seal ── */
+            .sig-area{
+                display:flex;align-items:flex-end;justify-content:space-between;
+                margin-top:auto;padding-top:20px
+            }
+            .seal-box{
+                text-align:center;width:110px
+            }
+            .seal-space{
+                height:70px;margin:0 auto 4px;
+            }
+            .seal-lbl{font-size:6.5pt;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+            .pr-nm{font-size:6.5pt;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px}
+
+            /* ── Footer ── */
+            .ftr{
+                display:flex;align-items:center;gap:12px;
+                margin-top:10px;padding:8px 12px;
+                border-top:2.5px solid #5C1A35;
+                background:#faf8f3
+            }
+            .ftr img{width:50px;height:50px;border:1.5px solid #5C1A35;border-radius:4px;flex-shrink:0}
+            .ftr-txt{
+                flex:1;font-family:'Arial',sans-serif;
+                direction:rtl;text-align:right;
+                font-size:8.5pt;font-weight:600;color:#5C1A35;line-height:1.6
+            }
+            .ftr-info{
+                text-align:center;flex-shrink:0;
+                border-left:1px solid #d4c5a9;padding-left:12px
+            }
+            .ftr-inst{font-size:6.5pt;font-weight:700;color:#5C1A35;letter-spacing:0.5px}
+            .ftr-dt{font-size:6pt;color:#888;font-weight:600;margin-top:2px}
+            .ftr-web{font-size:5.5pt;color:#B8860B;font-weight:600;margin-top:1px}
+        </style></head><body>
+        <div class="pg">
+            <div class="bnr"><img src="https://via.placeholder.com/800x120/5C1A35/FFFFFF?text=Barkat-e-Haram" alt="Banner"/></div>
+            <div class="accent"></div>
+
+            <div class="hdr">
+                <div class="hdr-title">Statement of Marks</div>
+                <div class="hdr-sub">Final Marksheet — Session 2024-25</div>
+            </div>
+
+            <div class="stu">
+                <div class="stu-r">
+                    <div class="stu-l">Enrolment</div>
+                    <div class="stu-v">1001</div>
+                </div>
+                <div class="stu-r">
+                    <div class="stu-l">Class</div>
+                    <div class="stu-v">Class 5 (A)</div>
+                </div>
+                <div class="stu-r full">
+                    <div class="stu-l">Student</div>
+                    <div class="stu-v">Aarav Sharma</div>
+                </div>
+                <div class="stu-r full">
+                    <div class="stu-l">Father</div>
+                    <div class="stu-v">Rahul Sharma</div>
+                </div>
+            </div>
+
+            <table class="mt">
+                <thead>
+                    <tr>
+                        <th rowspan="2" style="text-align:left;padding-left:8px;width:14%">Subjects</th>
+                        <th rowspan="2" style="width:6%">Max</th>
+                        <th rowspan="2" style="width:6%">Min</th>
+                        <th colspan="3" class="ob">Marks Obtained</th>
+                        <th rowspan="2" style="width:6%">Grade</th>
+                        <th rowspan="2" class="uh" style="width:26%">الکتب</th>
+                        <th rowspan="2" class="uh" style="width:18%">الفنون</th>
+                    </tr>
+                    <tr>
+                        <th class="ob" style="font-size:6pt;width:7%">Theo.</th>
+                        <th class="ob" style="font-size:6pt;width:7%">Pract.</th>
+                        <th class="ob" style="font-size:6pt;width:7%">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="re">
+                        <td class="se">Mathematics</td>
+                        <td>200</td>
+                        <td>66</td>
+                        <td>165</td>
+                        <td>0</td>
+                        <td class="ob-t">165</td>
+                        <td class="gr">A1</td>
+                        <td class="su">ریاضی</td>
+                        <td class="su">Mathematics</td>
+                    </tr>
+                    <tr class="ro">
+                        <td class="se">Science</td>
+                        <td>200</td>
+                        <td>66</td>
+                        <td>140</td>
+                        <td>35</td>
+                        <td class="ob-t">175</td>
+                        <td class="gr">A1</td>
+                        <td class="su">سائنس</td>
+                        <td class="su">Science</td>
+                    </tr>
+                    <tr class="re">
+                        <td class="se">Arabic (Deeni)</td>
+                        <td>200</td>
+                        <td>66</td>
+                        <td>130</td>
+                        <td>0</td>
+                        <td class="ob-t">130</td>
+                        <td class="gr">B1</td>
+                        <td class="su">عربی زبان</td>
+                        <td class="su">عربی</td>
+                    </tr>
+                    <tr class="ro">
+                        <td class="se">Islamic Studies</td>
+                        <td>200</td>
+                        <td>66</td>
+                        <td>50</td>
+                        <td>0</td>
+                        <td class="ob-t fm">50</td>
+                        <td class="gr">C2</td>
+                        <td class="su">اسلامیات</td>
+                        <td class="su">اسلامیات</td>
+                    </tr>
+                    <tr class="tr-tot">
+                        <td style="text-align:left;padding-left:8px"><strong>Total</strong></td>
+                        <td><strong>800</strong></td>
+                        <td><strong>264</strong></td>
+                        <td colspan="2" style="color:#aaa">—</td>
+                        <td class="ob-t"><strong>520</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td class="ut">المجموع</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="res">
+                <div class="res-tag">Result</div>
+                <div class="res-stat"><div class="rl">Status / Division</div><div class="rv">Fail</div></div>
+                <div class="res-dot"></div>
+                <div class="res-stat"><div class="rl">Percentage</div><div class="rv">65.0%</div></div>
+                <div class="res-dot"></div>
+                <div class="res-stat"><div class="rl">Grade</div><div class="rv" style="color:#f59e0b">B2</div></div>
+            </div>
+
+            <div class="gs">
+                <b>Grades:</b> A1 (91-100) · A2 (81-90) · B1 (71-80) · B2 (61-70) · C1 (51-60) · C2 (41-50) · D (33-40) · E1 (21-32) · E2 (≤20)
+                &nbsp;|&nbsp;
+                <b>Division:</b> Distinction (81%+) · 1st (60%+) · 2nd (45%+) · 3rd (33%+)
+            </div>
+
+            <div class="sig-area">
+                <div class="seal-box">
+                    <div class="seal-space"></div>
+                    <div class="seal-lbl">Official Stamp</div>
+                </div>
+                <div class="principal-box">
+                    <div class="seal-space"></div>
+                    <div class="pr-nm">Principal (Barkat-e-Haram)</div>
+                </div>
+            </div>
+
+            <div class="ftr">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=dummy&color=5C1A35&bgcolor=FFFFFF" alt="QR"/>
+                <div class="ftr-txt">یہ کشف الدرجات (مارکشیٹ) مرکز الدراسات الاسلامیہ للبنات، جامعہ برکاتِ حرم کی مستند مہر اور پرنسپل کے دستخط کے بغیر قطعی معتبر نہیں ہوگی۔</div>
+                <div class="ftr-info">
+                    <div class="ftr-inst">Barkat-e-Haram</div>
+                    <div class="ftr-web">www.barkateharam.in</div>
+                </div>
+            </div>
+        </div></body></html>

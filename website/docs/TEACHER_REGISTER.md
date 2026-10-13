@@ -1,0 +1,1 @@
+# 👨‍🏫 Teacher Registration Page Requirements

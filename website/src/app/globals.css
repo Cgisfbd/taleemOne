@@ -1,0 +1,443 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   1. Local Font-Face Declarations (Urdu, Arabic, Hindi)
+   ========================================================================== */
+
+/* Urdu Fonts with Headroom Overrides for Full Ascender/Descender Rendering */
+@font-face {
+  font-family: 'Jameel Noori Kasheeda';
+  src: url('/fonts/urdu/jameel-noori-kasheeda.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 135%;
+  descent-override: 50%;
+  line-gap-override: 20%;
+}
+
+@font-face {
+  font-family: 'Jameel Noori Nastaleeq';
+  src: url('/fonts/urdu/jameel-noori-nastaleeq.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 135%;
+  descent-override: 50%;
+  line-gap-override: 20%;
+}
+
+html, body {
+  touch-action: pan-x pan-y;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ==========================================================================
+   Global Cascading Typography Rules (Applied to ENTIRE Website & ALL Pages)
+   ========================================================================== */
+
+/* 1. URDU: Force Local Jameel Noori Nastaleeq Everywhere Across the Whole Website */
+html[lang="ur"],
+html[lang="ur"] body,
+html[lang="ur"] input,
+html[lang="ur"] textarea,
+html[lang="ur"] select,
+html[lang="ur"] button,
+html[lang="ur"] p,
+html[lang="ur"] span,
+html[lang="ur"] a,
+html[lang="ur"] li,
+html[lang="ur"] label,
+html[lang="ur"] td,
+html[lang="ur"] th {
+  font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif !important;
+}
+
+html[lang="ur"] h1,
+html[lang="ur"] h2,
+html[lang="ur"] h3,
+html[lang="ur"] h4,
+html[lang="ur"] h5,
+html[lang="ur"] h6,
+html[lang="ur"] .font-display,
+html[lang="ur"] .font-title,
+html[lang="ur"] .font-urduTitle {
+  font-family: 'Jameel Noori Kasheeda', 'Jameel Noori Nastaleeq', serif !important;
+}
+
+/* Global Urdu line-height breathing space for Nastaleeq text */
+html[lang="ur"] p,
+html[lang="ur"] li,
+html[lang="ur"] a,
+html[lang="ur"] td,
+html[lang="ur"] span {
+  letter-spacing: 0px;
+}
+
+/* 2. ARABIC: Alyamama across entire website */
+html[lang="ar"],
+html[lang="ar"] body,
+html[lang="ar"] input,
+html[lang="ar"] textarea,
+html[lang="ar"] select,
+html[lang="ar"] button,
+html[lang="ar"] p,
+html[lang="ar"] span,
+html[lang="ar"] a,
+html[lang="ar"] li,
+html[lang="ar"] label,
+html[lang="ar"] td,
+html[lang="ar"] th,
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6 {
+  font-family: 'Alyamama', 'Noto Sans Arabic', 'Amiri', serif !important;
+}
+
+/* 3. HINDI: Mukta across entire website */
+html[lang="hi"],
+html[lang="hi"] body,
+html[lang="hi"] input,
+html[lang="hi"] textarea,
+html[lang="hi"] select,
+html[lang="hi"] button,
+html[lang="hi"] p,
+html[lang="hi"] span,
+html[lang="hi"] a,
+html[lang="hi"] li,
+html[lang="hi"] label,
+html[lang="hi"] td,
+html[lang="hi"] th,
+html[lang="hi"] h1,
+html[lang="hi"] h2,
+html[lang="hi"] h3,
+html[lang="hi"] h4,
+html[lang="hi"] h5,
+html[lang="hi"] h6 {
+  font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif !important;
+}
+
+/* Arabic Fonts */
+@font-face {
+  font-family: 'Alyamama';
+  src: url('/fonts/arabic/Alyamama-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alyamama';
+  src: url('/fonts/arabic/Alyamama-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alyamama';
+  src: url('/fonts/arabic/Alyamama-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alyamama';
+  src: url('/fonts/arabic/Alyamama-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Hindi Fonts */
+@font-face {
+  font-family: 'Mukta';
+  src: url('/fonts/hindi/Mukta-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mukta';
+  src: url('/fonts/hindi/Mukta-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mukta';
+  src: url('/fonts/hindi/Mukta-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mukta';
+  src: url('/fonts/hindi/Mukta-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   2. Design Tokens & CSS Variables
+   ========================================================================== */
+:root {
+  --bg-base: #F6F1F5;
+  --mesh-tl: #B18CE5;
+  --mesh-tr: #F4BE77;
+  --mesh-bl: #F68EA2;
+  --mesh-br: #75CFCB;
+  --mesh-center: #FFFFFC;
+
+  --color-primary: #B18CE5;
+  --color-secondary: #F68EA2;
+  --color-tertiary: #75CFCB;
+  --color-warm: #F4BE77;
+
+  --surface-card: #FFFFFF;
+  --border-card: #EDE6EC;
+  --input-bg: #FCFAFC;
+
+  --text-primary: #2D1F33;
+  --text-secondary: #6B5A73;
+  --text-muted: #A394AB;
+}
+
+.dark {
+  --bg-base: #080C14;
+  --mesh-tl: #1E1B4B;
+  --mesh-tr: #261B11;
+  --mesh-bl: #2A0F24;
+  --mesh-br: #042429;
+  --mesh-center: #0D121F;
+
+  --surface-card: rgba(15, 23, 42, 0.75);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(15, 23, 42, 0.85);
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+}
+
+/* ==========================================================================
+   3. 5-Point Radial Mesh Gradient Backgrounds
+   ========================================================================== */
+.bg-pastel-mesh {
+  background-color: var(--bg-base);
+  background-image: 
+    radial-gradient(at 0% 0%, var(--mesh-tl) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, var(--mesh-tr) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, var(--mesh-bl) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, var(--mesh-br) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, var(--mesh-center) 0px, transparent 65%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* ==========================================================================
+   4. Glassmorphism & Luxury Component Utilities
+   ========================================================================== */
+.glass-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-ultra {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 30px -5px rgba(45, 31, 51, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+  transform: translateZ(0);
+}
+
+.dark .glass-ultra {
+  background: rgba(20, 11, 31, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.7), inset 0 1px 1px 0 rgba(255, 255, 255, 0.12), 0 0 15px rgba(245, 158, 11, 0.08);
+  transform: translateZ(0);
+}
+
+.glass-pill-active {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(244, 63, 94, 0.12) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 2px 8px rgba(245, 158, 11, 0.2);
+}
+
+.glass-item-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.dark .glass-item-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.btn-luxury-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F59E0B 50%, #E11D48 100%);
+  box-shadow: 0 4px 14px 0 rgba(245, 158, 11, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-luxury-gradient:hover {
+  background: linear-gradient(135deg, #C59B27 0%, #D97706 50%, #BE123C 100%);
+  box-shadow: 0 6px 20px 0 rgba(245, 158, 11, 0.45), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+}
+
+.btn-crystal-glass {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .btn-crystal-glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.glass-veil {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .glass-veil {
+  background: linear-gradient(135deg, rgba(34, 22, 43, 0.85) 0%, rgba(24, 15, 34, 0.7) 100%);
+}
+
+.light-bloom {
+  background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 60%);
+}
+
+.dark .light-bloom {
+  background: radial-gradient(circle at 50% 30%, rgba(245, 158, 11, 0.12) 0%, transparent 60%);
+}
+
+/* ==========================================================================
+   4.1 Marquee Ticker Animation (Continuous GPU-Accelerated)
+   ========================================================================== */
+@keyframes marquee-ltr {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(50%, 0, 0);
+  }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 20s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  width: max-content;
+  animation: marquee-rtl 20s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-ltr:hover,
+.animate-marquee-rtl:hover {
+  animation-play-state: paused;
+}
+
+/* ==========================================================================
+   5. General Document Setup
+   ========================================================================== */
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-base);
+  min-height: 100vh;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   6. A4 Printable Document Isolation (@media print)
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide everything on website (headers, banners, navigation, footers, search box) */
+  header, footer, nav, aside, form, .print\:hidden {
+    display: none !important;
+  }
+
+  /* Isolate and format ONLY #a4-printable-document & #a4-pdf-embed-container */
+  #a4-printable-document {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: 2px solid #000000 !important;
+    margin: 0 auto !important;
+    padding: 15px !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  #a4-pdf-embed-container,
+  #a4-pdf-embed-container iframe {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: #ffffff !important;
+  }
+}
+
+
